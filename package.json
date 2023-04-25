@@ -1,0 +1,26 @@
+{
+  "name": "telegram-ocr-bot(ZIPSO)",
+  "version": "1.0.0",
+  "description": "A Telegram bot that recognizes text from images using the RapidAPI OCR API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ocr",
+    "image",
+    "text",
+    "rapidapi",
+    "axios",
+    "telegraf"
+  ],
+  "author": "SAPTADIP SAHA (SciMathist)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "telegraf": "^4.12.2"
+  }
+}
