@@ -9,7 +9,8 @@ const fs = require('fs'); //built-in
 const delayTime = 500;
 
 // Create a new Telegraf bot instance
-const TELEGRAM_BOT_TOKEN = '5870366018:AAGGCvmKaJ5CD4qC0eQ0psVZpgmD3FmdMyc'
+const botSecret = process.env['BOT_TOKEN']
+const TELEGRAM_BOT_TOKEN = botSecret
 const bot = new Telegraf(TELEGRAM_BOT_TOKEN, {
   session: true,
 });
@@ -125,11 +126,13 @@ if (!file.file_path) {
     data.append('urls', fileUrl);
 
     // Set up options for the API request
+  const mySecret = process.env['RapidAPI-Key']
     const options = {
       method: 'POST',
       url: API_ENDPOINT,
+     
       headers: {
-        'X-RapidAPI-Key': 'ff8953e2b2mshfbd85d43df50f19p1b0e1bjsn3a980e29ae31',
+        'X-RapidAPI-Key': mySecret,
         'X-RapidAPI-Host': 'ocr-nanonets.p.rapidapi.com',
         ...data.getHeaders(),
       },
